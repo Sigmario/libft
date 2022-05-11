@@ -6,27 +6,23 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/05 15:57:37 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/10 20:18:48 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/11 19:31:37 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	size_t				i;
-	unsigned const char	*s;
-	unsigned char		*d;
+	unsigned char	*a;
 
-	i = 0;
-	s = src;
-	d = dest;
-	while (i < n)
+	a = s;
+	while (n > 0)
 	{
-		d[i] = s[i];
-		i++;
+		*a = c;
+		a++;
+		n--;
 	}
-	return (dest);
 }
 
 /*
@@ -36,23 +32,20 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 int	main(void)
 {
-	char srcOrigin[100] = "Fichier Source";
-	char destOrigin[100];
+	char strOrigin[] = {1,2,3,4,5,6,7,8,9};
+	char strCustom[] = {1,2,3,4,5,6,7,8,9};
 
-	printf("____________________");
-	puts("\n\nM E M C P Y :\n");
-	memcpy(destOrigin, srcOrigin, sizeof(srcOrigin));
-	printf("Srce: %s\n", srcOrigin);
-	printf("Dest: %s\n", destOrigin);
-	
-	char srcCustom[100] = "Fichier Source";
-	char destCustom[100];
+	memset(strOrigin, 1, 6);
+	printf("%d%d%d%d%d%d%d%d%d\n",
+    strOrigin[0], strOrigin[1], strOrigin[2],
+    strOrigin[3], strOrigin[4], strOrigin[5],
+    strOrigin[6], strOrigin[7], strOrigin[8]);
 
-	printf("____________________");
-	puts("\n\nF T _ M E M C P Y :\n");
-	ft_memcpy(destCustom, srcCustom, sizeof(srcCustom));
-	printf("Srce: %s\n", srcCustom);
-	printf("Dest: %s\n", destCustom);
+	ft_memset(strCustom, 1, 6);
+	printf("%d%d%d%d%d%d%d%d%d\n",
+    strCustom[0], strCustom[1], strCustom[2],
+    strCustom[3], strCustom[4], strCustom[5],
+    strCustom[6], strCustom[7], strCustom[8]);
 
 	return (0);
 }

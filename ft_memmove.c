@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/07 16:19:29 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/10 20:18:45 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/11 19:34:47 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	char		*tmp;
 
 	if (dest < src || src + n <= dest)
-	{
 		return (ft_memcpy(dest, src, n));
-	}
 	if (dest > src)
 	{
 		s = src + n;
