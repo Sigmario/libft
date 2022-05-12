@@ -6,19 +6,19 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/10 12:46:16 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/11 18:49:01 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/12 15:35:35 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_strnlen(const char *s, size_t maxlen)
+static size_t	ft_strnlen(const char *str, size_t maxlen)
 {
-	const char	*p = s;
+	const char	*ptr = str;
 
-	while (maxlen-- > 0 && *p)
-		p++;
-	return (p - s);
+	while (maxlen-- > 0 && *ptr)
+		ptr++;
+	return (ptr - str);
 }
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
@@ -36,17 +36,19 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 #include <bsd/string.h>
 #include <stdio.h>
 
-int	main()
+int	main(void)
 {
-	char dstO[100] = "853X9W7QLT";
-	char srcO[100] = "ABCZXY";
-	printf("%lu\n", strlcat(dstO, srcO, 5));
-	printf("%s\n", dstO);
+	puts ("\n- strlcat");
+	char dstOG[100] = "Qwertyuiop";
+	char srcOG[100] = "Asdfghj";
+	printf("Size of Dest + Srce = %lu\n", strlcat(dstOG, srcOG, 5));
 
-	char dstC[100] = "853X9W7QLT";
-	char srcC[100] = "ABCZXY";
-	printf("%lu\n", ft_strlcat(dstC, srcC, 5));
-	printf("%s\n", dstC);
+	puts ("\n- ft_strlcat");
+	char dstFT[100] = "Qwertyuiop";
+	char srcFT[100] = "Asdfghj";
+	printf("Size of Dest + Srce = %lu\n", ft_strlcat(dstFT, srcFT, 5));
+
+	return 0;
 }
 
 */

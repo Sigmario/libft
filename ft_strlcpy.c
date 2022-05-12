@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/10 11:30:37 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/11 17:14:18 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/12 15:34:40 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,17 +36,21 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 #include <stdio.h>
 #include <bsd/string.h>
 
-int	main()
+int	main(void)
 {
-	char srcO[] = "Hello";
-	char desO[14];
-	printf("%lu\n", strlcpy(desO, srcO, 5));
-	printf("%s\n", desO);
+	puts ("\n- strlcpy");
+	char srcOG[] = "Hello";
+	char dstOG[14];
+	printf("%lu\n", strlcpy(dstOG, srcOG, 5));
+	printf("%s\n", dstOG);
 
-	char srcC[] = "Hello";
-	char desC[14];
-	printf("%lu\n", ft_strlcpy(desC, srcC, 5));
-	printf("%s\n", desC);
+	puts ("\n- ft_strlcpy");
+	char srcFT[] = "Hello";
+	char dstFT[14];
+	printf("%lu\n", ft_strlcpy(dstFT, srcFT, 5));
+	printf("%s\n", dstFT);
+
+	return 0;
 }
 
 */

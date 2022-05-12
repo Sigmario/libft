@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/05 12:17:37 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/11 19:34:01 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/12 15:17:08 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,20 +32,22 @@ void	ft_bzero(void *s, size_t n)
 
 int	main(void)
 {
-	int tabOrigin[] = {1,2,3,4,5,6,7,8,9};
-	int tabCustom[] = {1,2,3,4,5,6,7,8,9};
+	int tabOG[] = {1,2,3,4,5,6,7,8,9};
+	int tabFT[] = {1,2,3,4,5,6,7,8,9};
 
-	bzero(tabOrigin, 24);
+	puts ("\n- bzero");
+	bzero(tabOG, 24);
 	printf("%d%d%d%d%d%d%d%d%d\n",
-    tabOrigin[0], tabOrigin[1], tabOrigin[2],
-    tabOrigin[3], tabOrigin[4], tabOrigin[5],
-    tabOrigin[6], tabOrigin[7], tabOrigin[8]);
+    tabOG[0], tabOG[1], tabOG[2],
+    tabOG[3], tabOG[4], tabOG[5],
+    tabOG[6], tabOG[7], tabOG[8]);
 
-	ft_bzero(tabCustom, 24);
+	puts ("\n- ft_bzero");
+	ft_bzero(tabFT, 24);
 	printf("%d%d%d%d%d%d%d%d%d\n",
-    tabCustom[0], tabCustom[1], tabCustom[2],
-    tabCustom[3], tabCustom[4], tabCustom[5],
-    tabCustom[6], tabCustom[7], tabCustom[8]);
+    tabFT[0], tabFT[1], tabFT[2],
+    tabFT[3], tabFT[4], tabFT[5],
+    tabFT[6], tabFT[7], tabFT[8]);
 
 	return (0);
 }

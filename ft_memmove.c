@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/07 16:19:29 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/11 19:34:47 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/12 15:29:05 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,17 +34,19 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 #include<stdio.h>
 #include<string.h>
 
-int main()
+int main(void)
 {
-   char srcOrigin[100] = "HelloWorld";
-   memmove(srcOrigin+5, srcOrigin, strlen(srcOrigin)+1);
-   printf("%s\n", srcOrigin);
-   
-   char srcCustom[100] = "HelloWorld";
-   ft_memmove(srcCustom+5, srcCustom, strlen(srcCustom)+1);
-   printf("%s\n", srcCustom);
-   
-   return 0;
+	puts ("\n- memmove");
+	char srcOG[100] = "HelloWorld";
+	memmove(srcOG+5, srcOG, strlen(srcOG)+1);
+	printf("%s\n", srcOG);
+	
+	puts ("\n- ft_memmove");
+	char srcFT[100] = "HelloWorld";
+	ft_memmove(srcFT+5, srcFT, strlen(srcFT)+1);
+	printf("%s\n", srcFT);
+	
+	return 0;
 }
 
 */

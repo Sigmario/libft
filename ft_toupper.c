@@ -1,39 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                      ::::::::   ::::::::   */
-/*   ft_strlen.c                                      :+:    :+: :+:    :+:   */
+/*   ft_toupper.c                                     :+:    :+: :+:    :+:   */
 /*                                                          +:+       +:+     */
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
-/*   Created: 2022/05/04 13:23:22 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/12 15:34:18 by julmuntz     ########  ########+10       */
+/*   Created: 2022/05/12 11:04:04 by julmuntz     #+#    #+#  #+#             */
+/*   Updated: 2022/05/12 11:20:39 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+int	ft_toupper(int c)
 {
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+	if (c >= 'a' && c <= 'z')
+		return (c -= 32);
 }
 
 /*
 
 #include <stdio.h>
-#include <string.h>
-int	main(void)
-{
-	puts ("\n- strlen");
-	printf("%ld\n", strlen("text"));
-	puts ("\n- ft_strlen");
-	printf("%ld\n", ft_strlen("text"));
 
-	return 0;
+int	main(int arc, char **arv)
+{
+	char	lower;
+
+	if (arc == 2)
+	{
+		lower = arv[1][0];
+		printf("%c\n", ft_toupper(lower));
+	}
 }
 
 */

@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/05 15:57:37 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/10 20:18:43 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/12 15:17:02 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,24 +36,20 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 int	main(void)
 {
-	char srcOrigin[100] = "Fichier Source";
-	char destOrigin[100];
-
-	printf("____________________");
-	puts("\n\nM E M C P Y :\n");
-	memcpy(destOrigin, srcOrigin, sizeof(srcOrigin));
-	printf("Srce: %s\n", srcOrigin);
-	printf("Dest: %s\n", destOrigin);
+	puts ("\n- memcpy");
+	char srcOG[100] = "Source File";
+	char dstOG[100];
+	memcpy(dstOG, srcOG, sizeof(srcOG));
+	printf("Srce: %s\n", srcOG);
+	printf("Dest: %s\n", dstOG);
+		
+	puts ("\n- ft_memcpy");
+	char srcFT[100] = "Source File";
+	char dstFT[100];
+	ft_memcpy(dstFT, srcFT, sizeof(srcFT));
+	printf("Srce: %s\n", srcFT);
+	printf("Dest: %s\n", dstFT);
 	
-	char srcCustom[100] = "Fichier Source";
-	char destCustom[100];
-
-	printf("____________________");
-	puts("\n\nF T _ M E M C P Y :\n");
-	ft_memcpy(destCustom, srcCustom, sizeof(srcCustom));
-	printf("Srce: %s\n", srcCustom);
-	printf("Dest: %s\n", destCustom);
-
 	return (0);
 }
 
