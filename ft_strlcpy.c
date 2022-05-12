@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/10 11:30:37 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/12 15:34:40 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/12 16:22:15 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 
 #include <stdio.h>
 #include <bsd/string.h>
-
 int	main(void)
 {
 	puts ("\n- strlcpy");

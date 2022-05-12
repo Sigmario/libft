@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/12 11:18:50 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/12 11:25:47 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/12 16:20:17 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ int	ft_tolower(int c)
 /*
 
 #include <stdio.h>
-
 int	main(int arc, char **arv)
 {
 	char	upper;

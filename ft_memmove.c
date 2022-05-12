@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/07 16:19:29 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/12 15:29:05 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/12 16:21:16 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 #include<stdio.h>
 #include<string.h>
-
 int main(void)
 {
 	puts ("\n- memmove");

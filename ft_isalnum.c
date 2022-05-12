@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/04 11:58:11 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/10 20:18:30 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/12 16:21:43 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ int	ft_isalnum(int c)
 /*
 
 #include <stdio.h>
-
 int	main(int arc, char **arv)
 {
 	int	alnum;

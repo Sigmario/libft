@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/05 12:17:37 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/12 15:17:08 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/12 16:20:20 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ void	ft_bzero(void *s, size_t n)
 
 #include <stdio.h>
 #include <strings.h>
-
 int	main(void)
 {
 	int tabOG[] = {1,2,3,4,5,6,7,8,9};

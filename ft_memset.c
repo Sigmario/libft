@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/05 15:57:37 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/12 15:16:29 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/12 16:21:19 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ void	*ft_memset(void *s, int c, size_t n)
 
 #include <stdio.h>
 #include <string.h>
-
 int	main(void)
 {
 	char strOG[] = {1,2,3,4,5,6,7,8,9};

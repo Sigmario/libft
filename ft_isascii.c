@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/04 12:15:53 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/10 20:18:37 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/12 16:21:38 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ int	ft_isascii(int c)
 /*
 
 #include <stdio.h>
-
 int	main(int arc, char **arv)
 {
 	int	ascii;

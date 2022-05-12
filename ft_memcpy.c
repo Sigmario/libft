@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/05 15:57:37 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/12 15:17:02 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/12 16:21:09 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 #include <stdio.h>
 #include <string.h>
-
 int	main(void)
 {
 	puts ("\n- memcpy");

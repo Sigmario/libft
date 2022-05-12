@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/04 12:26:51 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/10 20:18:20 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/12 16:21:11 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ int	ft_isprint(int c)
 /*
 
 #include <stdio.h>
-
 int	main(int arc, char **arv)
 {
 	printf("%d\n", ft_isprint(126));
