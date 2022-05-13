@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/10 12:46:16 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/12 16:22:26 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/13 19:47:25 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,15 +37,14 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 #include <stdio.h>
 int	main(void)
 {
+	char dst[100] = "Qwertyuiop";
+	char src[100] = "Asdfghj";
+	
 	puts ("\n- strlcat");
-	char dstOG[100] = "Qwertyuiop";
-	char srcOG[100] = "Asdfghj";
-	printf("Size of Dest + Srce = %lu\n", strlcat(dstOG, srcOG, 5));
+	printf("Size of Dest + Srce = %lu\n", strlcat(dst, src, 5));
 
 	puts ("\n- ft_strlcat");
-	char dstFT[100] = "Qwertyuiop";
-	char srcFT[100] = "Asdfghj";
-	printf("Size of Dest + Srce = %lu\n", ft_strlcat(dstFT, srcFT, 5));
+	printf("Size of Dest + Srce = %lu\n", ft_strlcat(dst, src, 5));
 
 	return 0;
 }

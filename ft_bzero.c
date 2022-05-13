@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/05 12:17:37 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/12 16:20:20 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/13 20:00:23 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,22 +31,21 @@ void	ft_bzero(void *s, size_t n)
 #include <strings.h>
 int	main(void)
 {
-	int tabOG[] = {1,2,3,4,5,6,7,8,9};
-	int tabFT[] = {1,2,3,4,5,6,7,8,9};
+	int tab[] = {1,2,3,4,5,6,7,8,9};
 
 	puts ("\n- bzero");
-	bzero(tabOG, 24);
+	bzero(tab, 24);
 	printf("%d%d%d%d%d%d%d%d%d\n",
-    tabOG[0], tabOG[1], tabOG[2],
-    tabOG[3], tabOG[4], tabOG[5],
-    tabOG[6], tabOG[7], tabOG[8]);
+    tab[0], tab[1], tab[2],
+    tab[3], tab[4], tab[5],
+    tab[6], tab[7], tab[8]);
 
 	puts ("\n- ft_bzero");
-	ft_bzero(tabFT, 24);
+	ft_bzero(tab, 24);
 	printf("%d%d%d%d%d%d%d%d%d\n",
-    tabFT[0], tabFT[1], tabFT[2],
-    tabFT[3], tabFT[4], tabFT[5],
-    tabFT[6], tabFT[7], tabFT[8]);
+    tab[0], tab[1], tab[2],
+    tab[3], tab[4], tab[5],
+    tab[6], tab[7], tab[8]);
 
 	return (0);
 }

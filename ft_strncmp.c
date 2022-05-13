@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/12 17:26:26 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/12 17:42:30 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/13 19:15:10 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,21 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 /*
 
 #include <stdio.h>
+#include <string.h>
 int	main(int arc, char *arv[])
 {	
-	int result;
+	size_t res;
+	
 	if (arc == 4)
 	{
-		result = ft_strncmp(arv[1], arv[2], atoi(arv[3]));
-		printf("%d\n", result);
+		res = strncmp(arv[1], arv[2], atoi(arv[3]));
+		
+		puts ("\n- strncmp");
+		printf("%ld\n", res);
+
+		puts ("\n- ft_strncmp");
+		printf("%ld\n", res);
 	}
 }
 
-*/
+ */

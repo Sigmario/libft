@@ -1,54 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                      ::::::::   ::::::::   */
-/*   ft_memcpy.c                                      :+:    :+: :+:    :+:   */
+/*   ft_memcmp.c                                      :+:    :+: :+:    :+:   */
 /*                                                          +:+       +:+     */
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
-/*   Created: 2022/05/05 15:57:37 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/13 19:17:54 by julmuntz     ########  ########+10       */
+/*   Created: 2022/05/13 17:48:01 by julmuntz     #+#    #+#  #+#             */
+/*   Updated: 2022/05/13 20:05:21 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t				i;
-	unsigned const char	*s;
-	unsigned char		*d;
+	size_t		i;
+	const char	*str1;
+	const char	*str2;
 
 	i = 0;
-	s = src;
-	d = dest;
-	while (i < n)
-	{
-		d[i] = s[i];
+	str1 = s1;
+	str2 = s2;
+	if (n == 0)
+		return (0);
+	while (str1[i] != 0 && str1[i] == str2[i] && i < n - 1)
 		i++;
-	}
-	return (dest);
+	return (str1[i] - str2[i]);
 }
 
 /*
 
 #include <stdio.h>
 #include <string.h>
-int	main(void)
+int	main(int arc, char *arv[])
 {
-	char src[100] = "Source File";
-	char dst[100];
+	size_t	res;
 
-	puts ("\n- memcpy");
-	memcpy(dst, src, sizeof(src));
-	printf("Srce: %s\n", src);
-	printf("Dest: %s\n", dst);
+	if (arc == 4)
+	{
+		res = memcmp(arv[1], arv[2], atoi(arv[3]));
+		
+		puts ("\n- memcmp");
+		printf("%ld\n", res);
 
-	puts ("\n- ft_memcpy")
-	ft_memcpy(dst, src, sizeof(src));
-	printf("Srce: %s\n", src);
-	printf("Dest: %s\n", dst);
-
-	return (0);
+		puts ("\n- ft_memcmp");
+		printf("%ld\n", res);
+	}
 }
 
 */

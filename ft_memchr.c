@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/13 16:31:08 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/13 17:47:15 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/13 19:01:02 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,21 +34,19 @@ void	*ft_memchr(const void *s, int c, size_t n)
 #include <string.h>
 int main (void)
 {
+	const char str[] = "My name is Bond... James Bond.";
+	const char chr = 'B';
+	char *ptr;
+
 	puts ("\n- memchr");
-	const char strOG[] = "My name is Bond... James Bond."; 
-	const char chrOG = 'B'; 
-	char *ptrOG;
-	ptrOG = memchr(strOG, chrOG, 007);
-	printf("Begins at first %c.\nThe output is:  %s\n", chrOG, ptrOG);
+	ptr = memchr(str, chr, 007);
+	printf("Begins at first %c.\nThe output is:  %s\n", chr, ptr);
 	
 	puts ("\n- ft_memchr");
-	const char strFT[] = "My name is Bond... James Bond."; 
-	const char chrFT = 'B'; 
-	char *ptrFT;
-	ptrFT = ft_memchr(strFT, chrFT, 007);
-	printf("Begins at first %c.\nThe output is:  %s\n", chrFT, ptrFT);
+	ptr = ft_memchr(str, chr, 007);
+	printf("Begins at first %c.\nThe output is:  %s\n", chr, ptr);
 	
 	return 0;
 }
 
-*/
+ */

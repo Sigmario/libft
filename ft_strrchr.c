@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/12 16:10:46 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/12 17:20:19 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/13 20:03:18 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,19 +28,17 @@ char	*ft_strrchr(const char *s, int c)
 #include <string.h>
 int main (void)
 {
+	const char str[] = "My name is Bond... James Bond."; 
+	const char chr = 'B'; 
+	char *ptr;
+
 	puts ("\n- strrchr");
-	const char strOG[] = "My name is Bond... James Bond."; 
-	const char chrOG = 'B'; 
-	char *ptrOG;
-	ptrOG = strrchr(strOG, chrOG);
-	printf("Begins at last %c.\nThe output is: %s\n", chrOG, ptrOG);
+	ptr = strrchr(str, chr);
+	printf("Begins at last %c.\nThe output is: %s\n", chr, ptr);
 	
 	puts ("\n- ft_strrchr");
-	const char strFT[] = "My name is Bond... James Bond."; 
-	const char chrFT = 'B'; 
-	char *ptrFT;
-	ptrFT = ft_strrchr(strFT, chrFT);
-	printf("Begins at last %c.\nThe output is: %s\n", chrFT, ptrFT);
+	ptr = ft_strrchr(str, chr);
+	printf("Begins at last %c.\nThe output is: %s\n", chr, ptr);
 	
 	return 0;
 }
