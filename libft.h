@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/06 12:29:49 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/13 20:07:42 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/16 15:04:23 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlen(const char *s);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strrchr(const char *s, int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
