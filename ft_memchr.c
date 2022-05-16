@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/13 16:31:08 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/16 18:47:59 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/16 21:27:08 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,32 +15,26 @@
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t		i;
-	size_t		l;
-	unsigned char	*chr;
-	unsigned char	*str;
+	char		chr;
+	const char	*str;
 
 	i = 0;
-	chr = (unsigned char *)c;
+	chr = (char)c;
 	str = s;
-	if (*chr == 0)
-		return ((unsigned char *)str);
-	if (*str == 0 && c == 0)
+	if (chr == 0)
+		return ("");
+	if (*str == 0 && chr == 0)
 		return ("");
 	while (str[i] && i < n)
 	{
-		while (str[i + l] == chr[l] && (i + l < n))
-		{
-			l++;
-			if (chr[l] == 0)
-				return ((unsigned char *)str + i);
-		}
-		l = 0;
+		if (str[i] == chr)
+			return ((char *)s + i);
 		i++;
 	}
 	return (NULL);
 }
 
-///*
+/*
 
 #include <stdio.h>
 #include <string.h>
@@ -77,4 +71,4 @@ int main (void)
 	// return 0;
 }
 
-//*/
+*/

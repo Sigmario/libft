@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/12 11:27:29 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/13 19:45:51 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/16 22:16:53 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,13 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
-
-	i = 0;
-	while (s[i] != (char)c)
-		i++;
-	return ((char *)s + i);
+	while (*s != (char)c)
+	{
+		if (*s == 0)
+			return (NULL);
+		s++;
+	}
+	return ((char *)s);
 }
 
 /*
@@ -34,11 +35,11 @@ int main (void)
 
 	puts ("\n- strchr");
 	ptr = strchr(str, chr);
-	printf("Begins at first %c.\nThe output is:  %s\n", chr, ptr);
+	printf("Begins at first %c.\nThe output is:  %s.\n", chr, ptr);
 
 	puts ("\n- ft_strchr");
 	ptr = ft_strchr(str, chr);
-	printf("Begins at first %c.\nThe output is:  %s\n", chr, ptr);
+	printf("Begins at first %c.\nThe output is:  %s.\n", chr, ptr);
 
 	return 0;
 }

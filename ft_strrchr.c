@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/12 16:10:46 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/13 20:03:18 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/16 23:44:01 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,16 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
+	char	*end;
 
-	i = ft_strlen(s) - 1;
-	while (s[i] != (char)c)
-		i--;
-	return ((char *)s + i);
+	end = (char *)s;
+	while (*s)
+		s++;
+	while (s != end && *s != (char)c)
+		s--;
+	if (*s == (char)c)
+		return ((char *)s);
+	return (NULL);
 }
 
 /*
@@ -34,11 +38,11 @@ int main (void)
 
 	puts ("\n- strrchr");
 	ptr = strrchr(str, chr);
-	printf("Begins at last %c.\nThe output is: %s\n", chr, ptr);
+	printf("Begins at last %c.\nThe output is: %s.\n", chr, ptr);
 	
 	puts ("\n- ft_strrchr");
 	ptr = ft_strrchr(str, chr);
-	printf("Begins at last %c.\nThe output is: %s\n", chr, ptr);
+	printf("Begins at last %c.\nThe output is: %s.\n", chr, ptr);
 	
 	return 0;
 }
