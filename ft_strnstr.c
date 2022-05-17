@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/16 13:59:37 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/16 17:29:33 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/17 15:00:29 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ int	main(void)
 	puts("\n- ft_strnstr");
 	ptr = ft_strnstr(full, part, 007);
 	printf("Begins at first %s.\nThe output is:  %s.\n", part, ptr);
+	
 	return (0);
 }
 

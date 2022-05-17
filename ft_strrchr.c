@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/12 16:10:46 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/16 23:44:01 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/17 15:01:36 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*ft_strrchr(const char *s, int c)
 #include <string.h>
 int main (void)
 {
-	const char str[] = "My name is Bond... James Bond."; 
+	const char *str = "My name is Bond... James Bond"; 
 	const char chr = 'B'; 
 	char *ptr;
 

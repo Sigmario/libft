@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/05 15:57:37 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/13 19:17:54 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/17 15:14:10 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t				i;
-	unsigned const char	*s;
 	unsigned char		*d;
+	unsigned const char	*s;
 
 	i = 0;
 	s = src;
@@ -43,7 +43,7 @@ int	main(void)
 	printf("Srce: %s\n", src);
 	printf("Dest: %s\n", dst);
 
-	puts ("\n- ft_memcpy")
+	puts ("\n- ft_memcpy");
 	ft_memcpy(dst, src, sizeof(src));
 	printf("Srce: %s\n", src);
 	printf("Dest: %s\n", dst);

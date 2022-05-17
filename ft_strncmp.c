@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/12 17:26:26 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/13 19:15:10 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/17 15:23:19 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,25 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	i;
+	size_t			i;
+	unsigned char	*str1;
+	unsigned char	*str2;
 
 	i = 0;
+	str1 = (void *)s1;
+	str2 = (void *)s2;
 	if (n == 0)
 		return (0);
-	while (s1[i] != 0 && s1[i] == s2[i] && i < n - 1)
+	while (str1[i] && str1[i] == str2[i] && i < n - 1)
 		i++;
-	return (s1[i] - s2[i]);
+	return (str1[i] - str2[i]);
 }
 
 /*
 
 #include <stdio.h>
 #include <string.h>
-int	main(int arc, char *arv[])
+int	main(int arc, char **arv)
 {	
 	size_t res;
 	

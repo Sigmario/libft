@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/13 17:48:01 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/13 20:05:21 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/17 15:10:48 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t		i;
-	const char	*str1;
-	const char	*str2;
+	size_t			i;
+	unsigned char	*str1;
+	unsigned char	*str2;
 
 	i = 0;
-	str1 = s1;
-	str2 = s2;
+	str1 = (void *)s1;
+	str2 = (void *)s2;
 	if (n == 0)
 		return (0);
-	while (str1[i] != 0 && str1[i] == str2[i] && i < n - 1)
+	while (str1[i] == str2[i] && i < n - 1)
 		i++;
 	return (str1[i] - str2[i]);
 }
@@ -32,7 +32,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 
 #include <stdio.h>
 #include <string.h>
-int	main(int arc, char *arv[])
+int	main(int arc, char **arv)
 {
 	size_t	res;
 
