@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/06 12:29:49 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/16 15:04:23 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/17 17:16:55 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 
+int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
