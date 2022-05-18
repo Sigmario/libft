@@ -6,7 +6,7 @@
 #    By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+         #
 #                                                         +#+   +#+            #
 #    Created: 2022/05/12 17:50:33 by julmuntz     #+#    #+#  #+#              #
-#    Updated: 2022/05/17 17:14:17 by julmuntz     ########  ########+10        #
+#    Updated: 2022/05/18 14:50:29 by julmuntz     ########  ########+10        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,7 @@ SRCS =  ft_atoi.c       \
         ft_memmove.c    \
         ft_memset.c     \
         ft_strchr.c     \
+        ft_strdup.c     \
         ft_strlcat.c    \
         ft_strlcpy.c    \
         ft_strlen.c     \

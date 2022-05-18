@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                      ::::::::   ::::::::   */
-/*   ft_memcpy.c                                      :+:    :+: :+:    :+:   */
+/*   ft_strdup.c                                      :+:    :+: :+:    :+:   */
 /*                                                          +:+       +:+     */
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
-/*   Created: 2022/05/05 15:57:37 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/18 16:40:35 by julmuntz     ########  ########+10       */
+/*   Created: 2022/05/18 12:46:26 by julmuntz     #+#    #+#  #+#             */
+/*   Updated: 2022/05/18 15:23:49 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+char	*ft_strdup(const char *s)
 {
-	size_t	i;
 	char	*d;
-	char	*s;
+	char	*t;
 
-	i = 0;
-	s = (void *)src;
-	d = (void *)dest;
-	if (src == NULL && dest == NULL)
+	d = malloc(ft_strlen(s) + 1 * sizeof(char));
+	if (d == NULL)
 		return (NULL);
-	while (n--)
-	{
-		d[i] = s[i];
-		i++;
-	}
-	return (dest);
+	t = d;
+	while (*s)
+		*t++ = *s++;
+	*t = 0;
+	return (d);
 }
 
 /*
@@ -37,20 +33,18 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 #include <string.h>
 int	main(void)
 {
-	char src[100] = "Source File";
-	char dst[100];
+	char *src = "Hello";
+	char *dst;
+	
+	puts ("\n- strdup");
+	dst = strdup(src);
+	printf("%s\n", dst);
+	
+	puts ("\n- ft_strdup");
+	dst = ft_strdup(src);
+	printf("%s\n", dst);
 
-	puts ("\n- memcpy");
-	memcpy(dst, src, sizeof(src));
-	printf("Srce: %s\n", src);
-	printf("Dest: %s\n", dst);
-
-	puts ("\n- ft_memcpy");
-	ft_memcpy(dst, src, sizeof(src));
-	printf("Srce: %s\n", src);
-	printf("Dest: %s\n", dst);
-
-	return (0);
+	return 0;
 }
 
 */
