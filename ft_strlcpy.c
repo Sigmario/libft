@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/10 11:30:37 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/17 15:15:28 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/19 16:21:24 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,11 @@ int	main(void)
 	char src[100] = "Hello";
 	char dst[100];
 
-	puts ("\n- strlcpy");
+	puts("\n- strlcpy");
 	printf("%lu\n", strlcpy(dst, src, 5));
 	printf("%s\n", dst);
 
-	puts ("\n- ft_strlcpy");
+	puts("\n- ft_strlcpy");
 	printf("%lu\n", ft_strlcpy(dst, src, 5));
 	printf("%s\n", dst);
 

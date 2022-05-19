@@ -6,12 +6,12 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/17 17:01:44 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/19 13:20:19 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/19 17:27:19 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "limits.h"
+#include <limits.h>
 
 int	ft_atoi(const char *str)
 {
@@ -50,15 +50,15 @@ int	main(int arc, char *arv[])
 	int var;
 	if (arc == 2)
 	{
-		puts ("\n- atoi");
+		puts("\n- atoi");
 		var = atoi(arv[1]);
 		printf("%d\n", var);
 
-		puts ("\n- ft_atoi");
+		puts("\n- ft_atoi");
 		var = ft_atoi(arv[1]);
 		printf("%d\n", var);
 
-		perror("Error");
+		perror("\nStatus");
 	}
 }
 

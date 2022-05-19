@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/12 11:04:04 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/12 17:43:44 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/19 17:45:05 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,12 @@ int	main(int arc, char **arv)
 	if (arc == 2)
 	{
 		lower = arv[1][0];
-		printf("%c\n", ft_toupper(lower));
+		
+		puts("\n- toupper");
+		printf("%d\n", toupper(lower));
+
+		puts("\n- ft_toupper");
+		printf("%d\n", ft_toupper(lower));
 	}
 }
 

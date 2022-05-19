@@ -1,22 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                      ::::::::   ::::::::   */
-/*   ft_tolower.c                                     :+:    :+: :+:    :+:   */
+/*   ft_calloc.c                                      :+:    :+: :+:    :+:   */
 /*                                                          +:+       +:+     */
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
-/*   Created: 2022/05/12 11:18:50 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/19 17:44:36 by julmuntz     ########  ########+10       */
+/*   Created: 2022/05/19 14:29:17 by julmuntz     #+#    #+#  #+#             */
+/*   Updated: 2022/05/19 17:26:07 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdint.h>
 
-int	ft_tolower(int c)
+void	*ft_calloc(size_t nbr, size_t size)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (c += 32);
-	return (c);
+	void	*ptr;
+
+	if (size != 0 && nbr > SIZE_MAX / size)
+		return (NULL);
+	ptr = malloc(nbr * size);
+	if (ptr == NULL)
+		return (NULL);
+	ft_bzero(ptr, size * nbr);
+	return (ptr);
 }
 
 /*
@@ -24,17 +31,21 @@ int	ft_tolower(int c)
 #include <stdio.h>
 int	main(int arc, char **arv)
 {
-	char	upper;
-
+	int		nbr;
+	int		*ptr;
 	if (arc == 2)
 	{
-		upper = arv[1][0];
+		nbr = arv[1][0];
+		
+		puts("\n- calloc");
+		ptr = calloc(nbr, sizeof(int));
+		printf("'%ls'\n", ptr);
+		free(ptr);
 
-		puts("\n- tolower");
-		printf("%d\n", tolower(upper));
-
-		puts("\n- ft_tolower");
-		printf("%d\n", ft_tolower(upper));
+		puts("\n- ft_calloc");
+		ptr = ft_calloc(nbr, sizeof(int));
+		printf("'%ls'\n", ptr);
+		free(ptr);
 	}
 }
 

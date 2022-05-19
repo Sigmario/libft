@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/12 16:10:46 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/17 15:01:36 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/19 16:21:24 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,11 @@ int main (void)
 	const char chr = 'B'; 
 	char *ptr;
 
-	puts ("\n- strrchr");
+	puts("\n- strrchr");
 	ptr = strrchr(str, chr);
 	printf("Begins at last %c.\nThe output is: %s.\n", chr, ptr);
 	
-	puts ("\n- ft_strrchr");
+	puts("\n- ft_strrchr");
 	ptr = ft_strrchr(str, chr);
 	printf("Begins at last %c.\nThe output is: %s.\n", chr, ptr);
 	

@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/13 17:48:01 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/17 15:10:48 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/19 16:21:24 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,10 @@ int	main(int arc, char **arv)
 	{
 		res = memcmp(arv[1], arv[2], atoi(arv[3]));
 		
-		puts ("\n- memcmp");
+		puts("\n- memcmp");
 		printf("%ld\n", res);
 
-		puts ("\n- ft_memcmp");
+		puts("\n- ft_memcmp");
 		printf("%ld\n", res);
 	}
 }

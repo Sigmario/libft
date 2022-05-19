@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/07 16:19:29 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/19 14:24:55 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/19 16:21:24 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,11 @@ int main(void)
 {
 	char src[100] = "HelloWorld";
 
-	puts ("\n- memmove");
+	puts("\n- memmove");
 	memmove(src+5, src, strlen(src)+1);
 	printf("%s\n", src);
 
-	puts ("\n- ft_memmove");
+	puts("\n- ft_memmove");
 	ft_memmove(src+5, src, strlen(src)+1);
 	printf("%s\n", src);
 

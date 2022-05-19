@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/03 10:49:53 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/12 16:21:40 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/19 17:40:53 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int	ft_isalpha(int c)
 /*
 
 #include <stdio.h>
+#include <ctype.h>
 int	main(int arc, char **arv)
 {
 	int	alpha;
@@ -27,6 +28,11 @@ int	main(int arc, char **arv)
 	if (arc == 2)
 	{
 		alpha = arv[1][0];
+
+		puts("\n- isalpha");
+		printf("%d\n", isalpha(alpha));
+
+		puts("\n- ft_isalpha");
 		printf("%d\n", ft_isalpha(alpha));
 	}
 }

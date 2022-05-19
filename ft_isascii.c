@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/04 12:15:53 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/12 16:21:38 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/19 17:42:10 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int	ft_isascii(int c)
 /*
 
 #include <stdio.h>
+#include <ctype.h>
 int	main(int arc, char **arv)
 {
 	int	ascii;
@@ -27,6 +28,11 @@ int	main(int arc, char **arv)
 	if (arc == 2)
 	{
 		ascii = arv[1][0];
+
+		puts("\n- isascii");
+		printf("%d\n", isascii(ascii));
+
+		puts("\n- ft_isascii");
 		printf("%d\n", ft_isascii(ascii));
 	}
 }

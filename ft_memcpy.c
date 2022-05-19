@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/05 15:57:37 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/19 14:24:33 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/19 16:21:24 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,12 +40,12 @@ int	main(void)
 	char src[100] = "Source File";
 	char dst[100];
 
-	puts ("\n- memcpy");
+	puts("\n- memcpy");
 	memcpy(dst, src, sizeof(src));
 	printf("Srce: %s\n", src);
 	printf("Dest: %s\n", dst);
 
-	puts ("\n- ft_memcpy");
+	puts("\n- ft_memcpy");
 	ft_memcpy(dst, src, sizeof(src));
 	printf("Srce: %s\n", src);
 	printf("Dest: %s\n", dst);

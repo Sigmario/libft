@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/04 11:58:11 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/12 16:21:43 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/19 17:41:19 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ int	ft_isalnum(int c)
 /*
 
 #include <stdio.h>
+#include <ctype.h>
 int	main(int arc, char **arv)
 {
 	int	alnum;
@@ -29,6 +30,11 @@ int	main(int arc, char **arv)
 	if (arc == 2)
 	{
 		alnum = arv[1][0];
+
+		puts("\n- isalnum");
+		printf("%d\n", isalnum(alnum));
+
+		puts("\n- ft_isalnum");
 		printf("%d\n", ft_isalnum(alnum));
 	}
 }

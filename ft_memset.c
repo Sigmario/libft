@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/05 15:57:37 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/13 19:43:39 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/19 16:21:24 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,14 @@ int	main(void)
 {
 	char str[] = {1,2,3,4,5,6,7,8,9};
 
-	puts ("\n- memset");
+	puts("\n- memset");
 	memset(str, 1, 6);
 	printf("%d%d%d%d%d%d%d%d%d\n",
 	str[0], str[1], str[2],
 	str[3], str[4], str[5],
 	str[6], str[7], str[8]);
 
-	puts ("\n- ft_memset");
+	puts("\n- ft_memset");
 	ft_memset(str, 1, 6);
 	printf("%d%d%d%d%d%d%d%d%d\n",
 	str[0], str[1], str[2],

@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/12 17:26:26 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/17 15:23:19 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/19 16:21:24 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,10 @@ int	main(int arc, char **arv)
 	{
 		res = strncmp(arv[1], arv[2], atoi(arv[3]));
 		
-		puts ("\n- strncmp");
+		puts("\n- strncmp");
 		printf("%ld\n", res);
 
-		puts ("\n- ft_strncmp");
+		puts("\n- ft_strncmp");
 		printf("%ld\n", res);
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/18 12:46:26 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/18 15:23:49 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/19 16:21:24 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,11 @@ int	main(void)
 	char *src = "Hello";
 	char *dst;
 	
-	puts ("\n- strdup");
+	puts("\n- strdup");
 	dst = strdup(src);
 	printf("%s\n", dst);
 	
-	puts ("\n- ft_strdup");
+	puts("\n- ft_strdup");
 	dst = ft_strdup(src);
 	printf("%s\n", dst);
 

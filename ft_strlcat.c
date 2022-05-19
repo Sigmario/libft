@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/10 12:46:16 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/13 19:47:25 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/19 16:21:24 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,10 @@ int	main(void)
 	char dst[100] = "Qwertyuiop";
 	char src[100] = "Asdfghj";
 	
-	puts ("\n- strlcat");
+	puts("\n- strlcat");
 	printf("Size of Dest + Srce = %lu\n", strlcat(dst, src, 5));
 
-	puts ("\n- ft_strlcat");
+	puts("\n- ft_strlcat");
 	printf("Size of Dest + Srce = %lu\n", ft_strlcat(dst, src, 5));
 
 	return 0;

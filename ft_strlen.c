@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/04 13:23:22 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/12 15:34:18 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/19 16:21:24 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ size_t	ft_strlen(const char *s)
 #include <string.h>
 int	main(void)
 {
-	puts ("\n- strlen");
+	puts("\n- strlen");
 	printf("%ld\n", strlen("text"));
-	puts ("\n- ft_strlen");
+	puts("\n- ft_strlen");
 	printf("%ld\n", ft_strlen("text"));
 
 	return 0;
