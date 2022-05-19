@@ -6,12 +6,13 @@
 #    By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+         #
 #                                                         +#+   +#+            #
 #    Created: 2022/05/12 17:50:33 by julmuntz     #+#    #+#  #+#              #
-#    Updated: 2022/05/18 14:50:29 by julmuntz     ########  ########+10        #
+#    Updated: 2022/05/19 14:22:44 by julmuntz     ########  ########+10        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS =  ft_atoi.c       \
         ft_bzero.c      \
+        ft_calloc.c     \
         ft_isalnum.c    \
         ft_isalpha.c    \
         ft_isascii.c    \
