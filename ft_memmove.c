@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/07 16:19:29 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/19 16:21:24 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/20 17:15:15 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 
 #include<stdio.h>
 #include<string.h>
-int main(void)
+int	main(void)
 {
 	char src[100] = "HelloWorld";
 

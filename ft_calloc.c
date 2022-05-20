@@ -6,12 +6,11 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/19 14:29:17 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/19 17:26:07 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/20 17:17:07 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdint.h>
 
 void	*ft_calloc(size_t nbr, size_t size)
 {

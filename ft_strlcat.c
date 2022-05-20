@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/10 12:46:16 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/19 16:21:24 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/20 17:12:00 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 
 /*
 
-#include <bsd/string.h>
 #include <stdio.h>
+#include <bsd/string.h>
 int	main(void)
 {
 	char dst[100] = "Qwertyuiop";

@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/16 13:59:37 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/19 17:35:50 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/20 17:12:21 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,8 @@ char	*ft_strnstr(const char *full, const char *part, size_t len)
 
 /*
 
-#include <bsd/string.h>
 #include <stdio.h>
+#include <bsd/string.h>
 int	main(void)
 {
 	const char *full = "My name is Bond... James Bond";
