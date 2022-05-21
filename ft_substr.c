@@ -6,27 +6,48 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/19 18:19:09 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/19 19:12:25 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/21 20:43:02 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_substr(char const *str, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int i;
-	char sub;
+	size_t			i;
+	unsigned int	tmp;
+	char			*dst;
 
 	i = 0;
-	sub = malloc(ft_strlen(str) + 1 * len);
-	if (sub == NULL)
+	tmp = start;
+	if (i > SIZE_MAX / len - tmp)
 		return (NULL);
-	while(i <= start)
+	dst = malloc(ft_strlen(s) + 1 * len - tmp);
+	if (dst == NULL)
+		return (NULL);
+	while (s[i] && i < len - tmp)
 	{
-		if (i == start)
-		{
-			
-		}
-		i++
+		dst[i++] = s[start++];
+		return (dst);
 	}
+	return (NULL);
 }
+
+/*
+
+#include <stdio.h>
+int	main(void)
+{
+	char *src = "ABCDEFGHIJKLMNOPQRSTUVXYZ";
+	char *dst;
+	int chr = 11;
+	int len = 16;
+
+	puts("\n- ft_substr");
+	dst = ft_substr(src, chr, len);
+	printf("%s\n", dst);
+
+	return (0);
+}
+
+*/

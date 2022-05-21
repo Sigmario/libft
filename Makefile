@@ -6,7 +6,7 @@
 #    By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+         #
 #                                                         +#+   +#+            #
 #    Created: 2022/05/12 17:50:33 by julmuntz     #+#    #+#  #+#              #
-#    Updated: 2022/05/19 18:23:15 by julmuntz     ########  ########+10        #
+#    Updated: 2022/05/21 16:04:45 by julmuntz     ########  ########+10        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,7 @@ SRCS =  ft_atoi.c       \
         ft_memset.c     \
         ft_strchr.c     \
         ft_strdup.c     \
+        ft_strjoin.c    \
         ft_strlcat.c    \
         ft_strlcpy.c    \
         ft_strlen.c     \
@@ -39,7 +40,7 @@ OBJS = ${SRCS:.c=.o}
 
 NAME = libft.a
 
-CC = gcc
+CC = clang
 RM = rm -f
 
 CFLAGS = -Wall -Wextra -Werror
