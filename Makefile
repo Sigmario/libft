@@ -6,7 +6,7 @@
 #    By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+         #
 #                                                         +#+   +#+            #
 #    Created: 2022/05/12 17:50:33 by julmuntz     #+#    #+#  #+#              #
-#    Updated: 2022/05/21 16:04:45 by julmuntz     ########  ########+10        #
+#    Updated: 2022/05/21 22:32:33 by julmuntz     ########  ########+10        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,7 @@ SRCS =  ft_atoi.c       \
         ft_strncmp.c    \
         ft_strnstr.c    \
         ft_strrchr.c    \
+        ft_strtrim.c    \
         ft_substr.c     \
         ft_tolower.c    \
         ft_toupper.c    \

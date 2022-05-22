@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/19 18:19:09 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/21 20:43:02 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/22 03:20:37 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,21 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t			i;
-	unsigned int	tmp;
-	char			*dst;
+	size_t	i;
+	char	*str;
 
 	i = 0;
-	tmp = start;
-	if (i > SIZE_MAX / len - tmp)
+	if (s == 0)
 		return (NULL);
-	dst = malloc(ft_strlen(s) + 1 * len - tmp);
-	if (dst == NULL)
+	if (start > ft_strlen(s) + 1)
+		return (ft_strdup(""));
+	str = (char *)malloc(sizeof(char) * (len + 1));
+	if (str == NULL)
 		return (NULL);
-	while (s[i] && i < len - tmp)
-	{
-		dst[i++] = s[start++];
-		return (dst);
-	}
-	return (NULL);
+	while (s[i] && i < len)
+		str[i++] = s[start++];
+	str[i] = 0;
+	return (str);
 }
 
 /*
@@ -38,15 +36,17 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 #include <stdio.h>
 int	main(void)
 {
-	char *src = "ABCDEFGHIJKLMNOPQRSTUVXYZ";
-	char *dst;
-	int chr = 11;
-	int len = 16;
+	char	*src;
+	char	*dst;
+	int		chr;
+	int		len;
 
+	src = "ABCDEFGHIJKLMNOPQRSTUVXYZ";
+	chr = 11;
+	len = 16;
 	puts("\n- ft_substr");
 	dst = ft_substr(src, chr, len);
 	printf("%s\n", dst);
-
 	return (0);
 }
 

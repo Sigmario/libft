@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/21 16:03:50 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/21 21:02:19 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/22 05:08:28 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	i[3];
 	char	*res;
 
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
 	i[1] = ft_strlen(s1);
 	i[2] = ft_strlen(s2);
 	res = (char *)malloc(i[1] + i[2] + 1);
