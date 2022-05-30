@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/13 16:31:08 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/20 17:15:15 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/30 15:09:50 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 #include <stdio.h>
 #include <string.h>
-int	main (void)
+int	main(void)
 {
 	const char *str = "My name is Bond... James Bond";
 	const char chr = 'B';
