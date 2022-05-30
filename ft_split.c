@@ -11,53 +11,116 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-char	*ft_strtok_r(char *s, const char c, char **end)
+static int	ft_char_count(char *s, char c, int *i)
 {
-	char	*res;
+	int len;
 
-	if (s == NULL)
-		s = *end;
-	while (*s && ft_strchr(&c, *s))
-		++s;
-	if (*s == '\0')
-		return (NULL);
-	res = s;
-	while (*s && !ft_strchr(&c, *s))
-		++s;
-	if (*s)
-		*s++ = '\0';
-	*end = s;
-	return (res);
+	len = 0;
+	printf("Begins at s[%d] %c\n", *i, c);
+	while (s[*i] && s[*i] == c)
+		s++;
+	while (s[*i] && s[*i] != c)
+	{
+		(*i)++;
+		len++;
+	}
+	return (len);
 }
 
-char	*ft_strtok(char *s, const char c)
+static int	ft_word_count(char *s, char c)
 {
-	static char	*last;
+	int i;
+	int count;
 
-	return (ft_strtok_r(s, c, &last));
+	i = 0;
+	count = 0;
+	while (s[i])
+	{
+		i++;
+		if (s[i] != c)
+		{
+			while (s[i] && s[i] != c)
+				i++;
+			count++;
+		}
+	}
+	return (count);
 }
+
+// char	ft_delim(char *s, char c)
+// {
+
+// }
+
+// static char	*ft_strtok_r(char *s, const char c, char **end)
+// {
+// 	char	*res;
+
+// 	if (s == NULL)
+// 		s = *end;
+// 	while (*s && ft_strchr(&c, *s))
+// 		++s;
+// 	if (*s == '\0')
+// 		return (NULL);
+// 	res = s;
+// 	while (*s && !ft_strchr(&c, *s))
+// 		++s;
+// 	if (*s)
+// 		*s++ = '\0';
+// 	*end = s;
+// 	return (res);
+// }
+
+// static char	*ft_strtok(char *s, const char c)
+// {
+// 	static char	*last;
+
+// 	return (ft_strtok_r(s, c, &last));
+// }
 
 char	**ft_split(char *s, char const c)
 {
-    char *t; 
-	t = (char *)malloc(ft_strtok(s, c));
-    while (t != NULL)
-	    t = ft_strtok(NULL, c);
-    return (t);
+	int 	index_words;
+	int 	index_chars;
+	int		nb_words;
+	int 	nb_chars;
+	char	**tab;
+
+	nb_words = ft_word_count(s, c);
+	tab = ft_calloc(sizeof(char **), (nb_words));
+	index_words = 0;
+	index_chars = 0;
+	// printf("nb_words =  %d\n",nb_words);
+	while (index_words < nb_words)
+	{
+		nb_chars = ft_char_count(s, c, &index_chars);
+		printf("%d/%d\n", index_chars, nb_chars);
+		tab[index_words] = ft_substr(s, index_chars, nb_chars);
+		index_words++;
+	}
+	return (tab);
 }
 
 ///*
 
-#include <stdio.h>
 int main()
 {
-    char *str = "Geeks-for-Geeks";
-    char chr = '-';
-    char *token;
-	token = *ft_split(str, chr);
-	printf("%s\n", token);
-    return 0;
+    int		i;
+	char	**ptr;
+	char	*str = "----ghsaefr-dfvf---fd--ghffxdd";
+    char	chr = '-';
+	i = 0;
+	ptr = ft_split(str, chr);
+	while (ptr[i] != NULL)
+	{
+		printf("%s\n", ptr[i]);
+		free(ptr[i]);
+		i++;
+	}
+	free(ptr);
+	return 0;
 }
 
 //*/
