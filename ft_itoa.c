@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/30 15:00:46 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/31 19:07:53 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/05/31 23:01:22 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	ft_nbrlen(int nbr)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	if (nbr < 0)
@@ -22,48 +22,44 @@ static int	ft_nbrlen(int nbr)
 		nbr *= -1;
 		len++;
 	}
-	while (nbr > 0)
+	while (nbr >= 10)
 	{
 		nbr /= 10;
 		len++;
 	}
+	len++;
 	return (len);
 }
 
-char *ft_itoa(int nbr)
+char	*ft_itoa(int nbr)
 {
-	int		i;
-	long	nb;
 	int		len;
 	char	*str;
+	int		signe;
 
-	i = 0;
-	nb = nbr;
-	len = ft_nbrlen(nb);
-	str = ft_calloc(len, sizeof(char *) + 1);
+	signe = 0;
+	len = ft_nbrlen(nbr);
+	str = ft_calloc(len + 1, sizeof(char));
 	if (str == NULL)
 		return (NULL);
-	str[len] = 0;
-	len--;
-	if (nb < 0)
+	str[len--] = 0;
+	if (nbr == INT_MIN)
+		return ("-2147483648");
+	if (nbr < 0)
 	{
 		str[0] = '-';
-		nb *= -1;
+		nbr *= -1;
+		signe++;
 	}
-	while (nb > 0)
+	while (len >= 0 + signe)
 	{
-		str[len] = (nb % 10) + 48;
-		nb /= 10;
-	if ((unsigned long)nb > LONG_MAX && str[0] != '-')
-		return ("-1");
-	if ((unsigned long)nb > LONG_MAX && str[0] == '-')
-		return ("0");
-		len--;
+		str[len--] = (nbr % 10) + 48;
+		nbr /= 10;
 	}
 	return (str);
 }
 
-///*
+/*
 
 #include <stdio.h>
 int	main(int arc, char *arv[])
@@ -74,7 +70,6 @@ int	main(int arc, char *arv[])
 		var = ft_itoa(ft_atoi(arv[1]));
 		printf("%s\n", var);
 	}
-	
 }
 
-//*/
+*/
