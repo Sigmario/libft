@@ -6,17 +6,26 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/30 15:00:46 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/31 23:01:22 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/06/01 17:55:28 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static char	*ft_intmin(int nbr)
+{
+	char	*str;
+
+	str = ft_itoa(nbr + 1);
+	str[10] = '8';
+	return (str);
+}
+
 static int	ft_nbrlen(int nbr)
 {
 	int	len;
 
-	len = 0;
+	len = 1;
 	if (nbr < 0)
 	{
 		nbr *= -1;
@@ -27,7 +36,6 @@ static int	ft_nbrlen(int nbr)
 		nbr /= 10;
 		len++;
 	}
-	len++;
 	return (len);
 }
 
@@ -44,7 +52,7 @@ char	*ft_itoa(int nbr)
 		return (NULL);
 	str[len--] = 0;
 	if (nbr == INT_MIN)
-		return ("-2147483648");
+		return (ft_intmin(nbr));
 	if (nbr < 0)
 	{
 		str[0] = '-';
