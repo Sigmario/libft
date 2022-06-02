@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/30 15:00:46 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/06/02 22:23:47 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/06/02 22:50:37 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,12 +38,12 @@ char	*ft_itoa(int nbr)
 
 	signe = 0;
 	len = ft_nbrlen(nbr);
+	if (nbr == INT_MIN)
+		return (ft_strdup("-2147483648"));
 	str = ft_calloc(len + 1, sizeof(char));
 	if (str == NULL)
 		return (NULL);
 	str[len--] = 0;
-	if (nbr == INT_MIN)
-		return (ft_strdup("-2147483648"));
 	if (nbr < 0)
 	{
 		str[0] = '-';
@@ -82,7 +82,7 @@ static char	*ft_intmin(int nbr)
 
 	str = ft_itoa(nbr + 1);
 	str[10] = '8';
-	return (str);ocess memory map follows:
+	return (str);
 }
 
 */
