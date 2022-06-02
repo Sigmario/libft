@@ -6,20 +6,11 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/30 15:00:46 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/06/01 17:55:28 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/06/02 20:34:12 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static char	*ft_intmin(int nbr)
-{
-	char	*str;
-
-	str = ft_itoa(nbr + 1);
-	str[10] = '8';
-	return (str);
-}
 
 static int	ft_nbrlen(int nbr)
 {
@@ -52,7 +43,7 @@ char	*ft_itoa(int nbr)
 		return (NULL);
 	str[len--] = 0;
 	if (nbr == INT_MIN)
-		return (ft_intmin(nbr));
+		return (free(str), ft_strdup("-2147483648"));
 	if (nbr < 0)
 	{
 		str[0] = '-';
@@ -70,14 +61,28 @@ char	*ft_itoa(int nbr)
 /*
 
 #include <stdio.h>
-int	main(int arc, char *arv[])
+int	main(int arc, char **arv)
 {
 	char *var;
 	if (arc == 2)
 	{
 		var = ft_itoa(ft_atoi(arv[1]));
 		printf("%s\n", var);
+		free(var);
 	}
+}
+
+*/
+
+/*
+
+static char	*ft_intmin(int nbr)
+{
+	char	*str;
+
+	str = ft_itoa(nbr + 1);
+	str[10] = '8';
+	return (str);ocess memory map follows:
 }
 
 */
