@@ -6,7 +6,7 @@
 #    By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+         #
 #                                                         +#+   +#+            #
 #    Created: 2022/05/12 17:50:33 by julmuntz     #+#    #+#  #+#              #
-#    Updated: 2022/06/02 15:22:58 by julmuntz     ########  ########+10        #
+#    Updated: 2022/06/02 17:26:40 by julmuntz     ########  ########+10        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,7 @@ SRCS		=	ft_atoi.c			\
     			ft_tolower.c		\
     			ft_toupper.c		\
 
-OBJS		= 	${SRCS:.c=.o}
+OBJS		= 	$(SRCS:.c=.o)
 
 B_SRCS		=	ft_lstadd_back.c	\
 				ft_lstadd_front.c	\
@@ -57,7 +57,7 @@ B_SRCS		=	ft_lstadd_back.c	\
 				ft_lstnew.c			\
 				ft_lstsize.c		\
 
-B_OBJS		= 	${B_SRCS:.c=.o}
+B_OBJS		= 	$(B_SRCS:.c=.o)
 
 NAME		= 	libft.a
 
@@ -65,20 +65,20 @@ CC			= 	clang
 RM			= 	rm -f
 CFLAGS		= 	-Wall -Wextra -Werror
 
-${NAME}:		${OBJS}
-					ar rc ${NAME} ${OBJS}
+$(NAME):		$(OBJS)
+					ar rc $(NAME) $(OBJS)
 
-all:			${NAME}
+all:			$(NAME)
 
 clean:
-					${RM} ${OBJS}
+					$(RM) $(OBJS) $(B_OBJS)
 
 fclean:			clean
-					${RM} ${NAME}
+					$(RM) $(NAME)
 
 re:				fclean all
 
-bonus:			${OBJS} ${B_OBJS}
-					ar rc ${NAME} ${OBJS} ${B_OBJS}
+bonus:			$(OBJS) $(B_OBJS)
+					ar rc $(NAME) $(OBJS) $(B_OBJS)
 
 .PHONY:			all clean fclean re bonus
