@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/06 12:29:49 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/25 17:44:11 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/06/02 14:30:09 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@
 # include <stdint.h>
 # include <stdlib.h>
 # include <unistd.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
@@ -39,7 +45,7 @@ void	ft_putstr_fd(char *s, int fd);
 char	**ft_split(char *s, char const c);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *s);
-void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 char	*ft_strjoin(char const *s1, char const *s2);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
