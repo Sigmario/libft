@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/12 11:04:04 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/19 17:45:05 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/06/02 22:20:47 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ int	ft_toupper(int c)
 int	main(int arc, char **arv)
 {
 	char	lower;
-
 	if (arc == 2)
 	{
 		lower = arv[1][0];

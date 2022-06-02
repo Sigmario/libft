@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/12 17:26:26 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/19 16:21:24 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/06/02 22:20:57 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 int	main(int arc, char **arv)
 {	
 	size_t res;
-	
 	if (arc == 4)
 	{
 		res = strncmp(arv[1], arv[2], atoi(arv[3]));

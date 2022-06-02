@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/30 15:00:46 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/06/02 20:34:12 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/06/02 22:23:47 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ char	*ft_itoa(int nbr)
 		return (NULL);
 	str[len--] = 0;
 	if (nbr == INT_MIN)
-		return (free(str), ft_strdup("-2147483648"));
+		return (ft_strdup("-2147483648"));
 	if (nbr < 0)
 	{
 		str[0] = '-';

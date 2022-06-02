@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/03 10:49:53 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/19 17:40:53 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/06/02 22:21:10 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ int	ft_isalpha(int c)
 int	main(int arc, char **arv)
 {
 	int	alpha;
-
 	if (arc == 2)
 	{
 		alpha = arv[1][0];

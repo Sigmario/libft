@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/21 16:03:50 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/22 05:08:28 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/06/02 22:21:03 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 int	main(int arc, char **arv)
 {
 	char	*str;
-
 	if (arc == 3)
 	{
 		puts("\n- ft_strjoin");

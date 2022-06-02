@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/04 11:58:11 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/19 17:41:19 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/06/02 22:20:53 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ int	ft_isalnum(int c)
 int	main(int arc, char **arv)
 {
 	int	alnum;
-
 	if (arc == 2)
 	{
 		alnum = arv[1][0];

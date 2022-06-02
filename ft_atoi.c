@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/17 17:01:44 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/20 17:10:03 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/06/02 22:19:07 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int	ft_atoi(const char *str)
 /*
 
 #include <stdio.h>
-int	main(int arc, char *arv[])
+int	main(int arc, char **arv)
 {
 	int var;
 	if (arc == 2)

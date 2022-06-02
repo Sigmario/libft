@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/03 12:14:17 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/19 17:42:41 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/06/02 22:21:05 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ int	ft_isdigit(int c)
 int	main(int arc, char **arv)
 {
 	int	digit;
-
 	if (arc == 2)
 	{
 		digit = arv[1][0];

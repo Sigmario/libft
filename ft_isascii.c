@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/04 12:15:53 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/19 17:42:10 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/06/02 22:21:07 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ int	ft_isascii(int c)
 int	main(int arc, char **arv)
 {
 	int	ascii;
-
 	if (arc == 2)
 	{
 		ascii = arv[1][0];
