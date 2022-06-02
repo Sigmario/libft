@@ -62,6 +62,8 @@ char	**ft_split(char *s, char const c)
 	index_chars = 0;
 	nb_words = ft_word_count(s, c);
 	tab = ft_calloc(sizeof(char *), (nb_words + 1));
+	if (tab == NULL)
+		return (NULL);
 	while (index_words < nb_words)
 	{
 		nb_chars = ft_char_count(s, c, &index_chars);

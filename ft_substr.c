@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/05/19 18:19:09 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/05/22 03:20:37 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/06/02 13:16:20 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*str;
 
 	i = 0;
-	if (s == 0)
+	if (s == NULL)
 		return (NULL);
-	if (start > ft_strlen(s) + 1)
+	if (start >= ft_strlen(s))
 		return (ft_strdup(""));
 	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (str == NULL)
