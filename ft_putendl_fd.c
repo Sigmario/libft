@@ -6,7 +6,7 @@
 /*   By: julmuntz <julmuntz@student.42.fr>              +#++:      +#+        */
 /*                                                        +#+   +#+           */
 /*   Created: 2022/06/01 18:16:31 by julmuntz     #+#    #+#  #+#             */
-/*   Updated: 2022/06/01 18:34:29 by julmuntz     ########  ########+10       */
+/*   Updated: 2022/06/04 00:13:56 by julmuntz     ########  ########+10       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putendl_fd(char *s, int fd)
 	int	i;
 
 	i = 0;
+	if (s == NULL)
+		return ;
 	while (s[i])
 		write(fd, &s[i++], 1);
 	write(fd, "\n", 1);
