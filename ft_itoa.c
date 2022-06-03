@@ -32,27 +32,27 @@ static int	ft_nbrlen(int nbr)
 
 char	*ft_itoa(int nbr)
 {
-	int		len;
+	int		size;
 	char	*str;
-	int		signe;
+	int		sign;
 
-	signe = 0;
-	len = ft_nbrlen(nbr);
 	if (nbr == INT_MIN)
 		return (ft_strdup("-2147483648"));
-	str = ft_calloc(len + 1, sizeof(char));
+	size = ft_nbrlen(nbr);
+	str = ft_calloc(size + 1, sizeof(char));
 	if (str == NULL)
 		return (NULL);
-	str[len--] = 0;
+	str[size--] = 0;
+	sign = 0;
 	if (nbr < 0)
 	{
 		str[0] = '-';
 		nbr *= -1;
-		signe++;
+		sign++;
 	}
-	while (len >= 0 + signe)
+	while (size >= 0 + sign)
 	{
-		str[len--] = (nbr % 10) + 48;
+		str[size--] = (nbr % 10) + 48;
 		nbr /= 10;
 	}
 	return (str);
