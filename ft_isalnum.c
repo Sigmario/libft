@@ -18,24 +18,3 @@ int	ft_isalnum(int c)
 		return (1);
 	return (0);
 }
-
-/*
-
-#include <stdio.h>
-#include <ctype.h>
-int	main(int arc, char **arv)
-{
-	int	alnum;
-	if (arc == 2)
-	{
-		alnum = arv[1][0];
-
-		puts("\n- isalnum");
-		printf("%d\n", isalnum(alnum));
-
-		puts("\n- ft_isalnum");
-		printf("%d\n", ft_isalnum(alnum));
-	}
-}
-
-*/

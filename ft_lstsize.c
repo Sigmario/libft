@@ -24,18 +24,3 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (count);
 }
-
-/*
-
-#include <stdio.h>
-int	main(int arc, char **arv)
-{
-	t_list *str;
-
-	str = ft_lstnew("qwertyuiop");
-	str->next = ft_lstnew("asdfghjkl");
-	str->next->next = ft_lstnew("zxcvbnm");
-	printf("%d\n", ft_lstsize(str));
-}
-
-*/

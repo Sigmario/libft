@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_convert_base.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julmuntz <julmuntz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/05 14:46:54 by julmuntz          #+#    #+#             */
-/*   Updated: 2022/07/10 19:59:42 by julmuntz         ###   ########.fr       */
+/*   Created: 2022/07/11 12:46:33 by julmuntz          #+#    #+#             */
+/*   Updated: 2022/07/11 19:15:36 by julmuntz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*d)(void *))
+int	ft_convert_base(int n, int base)
 {
-	t_list	*tmp;
-
-	while (*lst)
-	{
-		tmp = (*lst)->next;
-		ft_lstdelone(*lst, d);
-		*lst = tmp;
-	}
-	*lst = NULL;
+	if (n == 0 || base == 10)
+		return (n);
+	return ((n % base) + 10 * ft_convert_base(n / base, base));
 }

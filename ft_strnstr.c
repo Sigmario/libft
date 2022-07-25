@@ -36,26 +36,3 @@ char	*ft_strnstr(const char *full, const char *part, size_t len)
 	}
 	return (NULL);
 }
-
-/*
-
-#include <stdio.h>
-#include <bsd/string.h>
-int	main(void)
-{
-	const char *full = "My name is Bond... James Bond";
-	const char *part = "Bo";
-	char *ptr;
-
-	puts("\n- strnstr");
-	ptr = strnstr(full, part, 007);
-	printf("Begins at first %s.\nThe output is:  %s.\n", part, ptr);
-
-	puts("\n- ft_strnstr");
-	ptr = ft_strnstr(full, part, 007);
-	printf("Begins at first %s.\nThe output is:  %s.\n", part, ptr);
-	
-	return (0);
-}
-
-*/

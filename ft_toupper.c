@@ -18,23 +18,3 @@ int	ft_toupper(int c)
 		return (c -= 32);
 	return (c);
 }
-
-/*
-
-#include <stdio.h>
-int	main(int arc, char **arv)
-{
-	char	lower;
-	if (arc == 2)
-	{
-		lower = arv[1][0];
-		
-		puts("\n- toupper");
-		printf("%d\n", toupper(lower));
-
-		puts("\n- ft_toupper");
-		printf("%d\n", ft_toupper(lower));
-	}
-}
-
-*/

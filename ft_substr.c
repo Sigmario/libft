@@ -35,24 +35,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str[i] = 0;
 	return (str);
 }
-
-/*
-
-#include <stdio.h>
-int	main(void)
-{
-	char	*src;
-	char	*dst;
-	int		chr;
-	int		len;
-
-	src = "ABCDEFGHIJKLMNOPQRSTUVXYZ";
-	chr = 11;
-	len = 16;
-	dst = ft_substr(src, chr, len);
-	printf("%s\n", dst);
-	free(dst);
-	return (0);
-}
-
-*/

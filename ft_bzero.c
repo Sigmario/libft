@@ -24,30 +24,3 @@ void	ft_bzero(void *s, size_t n)
 		n--;
 	}
 }
-
-/*
-
-#include <stdio.h>
-#include <strings.h>
-int	main(void)
-{
-	int tab[] = {1,2,3,4,5,6,7,8,9};
-
-	puts("\n- bzero");
-	bzero(tab, 24);
-	printf("%d%d%d%d%d%d%d%d%d\n",
-    tab[0], tab[1], tab[2],
-    tab[3], tab[4], tab[5],
-    tab[6], tab[7], tab[8]);
-
-	puts("\n- ft_bzero");
-	ft_bzero(tab, 24);
-	printf("%d%d%d%d%d%d%d%d%d\n",
-    tab[0], tab[1], tab[2],
-    tab[3], tab[4], tab[5],
-    tab[6], tab[7], tab[8]);
-
-	return (0);
-}
-
-*/

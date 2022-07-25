@@ -73,28 +73,3 @@ char	**ft_split(char *s, char const c)
 	}
 	return (tab);
 }
-
-/*
-
-#include <stdio.h>
-int main(void)
-{
-    int		i;
-	char	**ptr;
-	char	*str = "---abc-def--ghi----jkl-";
-    char	chr = '-';
-	i = 0;
-	ptr = ft_split(str, chr);
-	if (ptr == NULL)
-		return (1);
-	while (ptr[i] != NULL)
-	{
-		printf("%s\n", ptr[i]);
-		free(ptr[i]);
-		i++;
-	}
-	free(ptr);
-	return 0;
-}
-
-*/

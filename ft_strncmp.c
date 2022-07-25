@@ -27,24 +27,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		i++;
 	return (str1[i] - str2[i]);
 }
-
-/*
-
-#include <stdio.h>
-#include <string.h>
-int	main(int arc, char **arv)
-{	
-	size_t res;
-	if (arc == 4)
-	{
-		res = strncmp(arv[1], arv[2], atoi(arv[3]));
-		
-		puts("\n- strncmp");
-		printf("%ld\n", res);
-
-		puts("\n- ft_strncmp");
-		printf("%ld\n", res);
-	}
-}
-
- */

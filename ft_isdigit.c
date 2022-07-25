@@ -16,24 +16,3 @@ int	ft_isdigit(int c)
 		return (1);
 	return (0);
 }
-
-/*
-
-#include <stdio.h>
-#include <ctype.h>
-int	main(int arc, char **arv)
-{
-	int	digit;
-	if (arc == 2)
-	{
-		digit = arv[1][0];
-
-		puts("\n- isdigit");
-		printf("%d\n", isdigit(digit));
-
-		puts("\n- ft_isdigit");
-		printf("%d\n", ft_isdigit(digit));
-	}
-}
-
-*/

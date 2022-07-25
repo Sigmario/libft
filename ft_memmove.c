@@ -28,24 +28,3 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-
-/*
-
-#include<stdio.h>
-#include<string.h>
-int	main(void)
-{
-	char src[100] = "HelloWorld";
-
-	puts("\n- memmove");
-	memmove(src+5, src, strlen(src)+1);
-	printf("%s\n", src);
-
-	puts("\n- ft_memmove");
-	ft_memmove(src+5, src, strlen(src)+1);
-	printf("%s\n", src);
-
-	return 0;
-}
-
-*/

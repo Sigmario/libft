@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_puthex_ul.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julmuntz <julmuntz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/05 14:46:54 by julmuntz          #+#    #+#             */
-/*   Updated: 2022/07/10 19:59:42 by julmuntz         ###   ########.fr       */
+/*   Created: 2022/07/11 19:05:03 by julmuntz          #+#    #+#             */
+/*   Updated: 2022/07/11 19:06:40 by julmuntz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*d)(void *))
+void	ft_puthex_ul(unsigned long int n)
 {
-	t_list	*tmp;
+	char	*reference;
 
-	while (*lst)
+	reference = "0123456789abcdef";
+	if (n >= 16)
 	{
-		tmp = (*lst)->next;
-		ft_lstdelone(*lst, d);
-		*lst = tmp;
+		ft_puthex_ul(n / 16);
+		ft_puthex_ul(n % 16);
 	}
-	*lst = NULL;
+	else
+		write(1, &reference[n], 1);
 }

@@ -26,25 +26,3 @@ char	*ft_strdup(const char *s)
 	*t = 0;
 	return (d);
 }
-
-/*
-
-#include <stdio.h>
-#include <string.h>
-int	main(void)
-{
-	char *src = "Hello";
-	char *dst;
-	
-	puts("\n- strdup");
-	dst = strdup(src);
-	printf("%s\n", dst);
-	
-	puts("\n- ft_strdup");
-	dst = ft_strdup(src);
-	printf("%s\n", dst);
-
-	return 0;
-}
-
-*/

@@ -29,21 +29,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	res[i[1] + i[2]] = 0;
 	return (res);
 }
-
-/*
-
-#include <stdio.h>
-int	main(int arc, char **arv)
-{
-	char	*str;
-	if (arc == 3)
-	{
-		puts("\n- ft_strjoin");
-		str = ft_strjoin(arv[1], arv[2]);
-		printf("%s\n", str);
-		free(str);
-		return (0);
-	}
-}
-
-*/

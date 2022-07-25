@@ -16,24 +16,3 @@ int	ft_isascii(int c)
 		return (1);
 	return (0);
 }
-
-/*
-
-#include <stdio.h>
-#include <ctype.h>
-int	main(int arc, char **arv)
-{
-	int	ascii;
-	if (arc == 2)
-	{
-		ascii = arv[1][0];
-
-		puts("\n- isascii");
-		printf("%d\n", isascii(ascii));
-
-		puts("\n- ft_isascii");
-		printf("%d\n", ft_isascii(ascii));
-	}
-}
-
-*/

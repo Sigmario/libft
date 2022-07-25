@@ -30,27 +30,3 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-
-/*
-
-#include <stdio.h>
-#include <string.h>
-int	main(void)
-{
-	char src[100] = "Source File";
-	char dst[100];
-
-	puts("\n- memcpy");
-	memcpy(dst, src, sizeof(src));
-	printf("Srce: %s\n", src);
-	printf("Dest: %s\n", dst);
-
-	puts("\n- ft_memcpy");
-	ft_memcpy(dst, src, sizeof(src));
-	printf("Srce: %s\n", src);
-	printf("Dest: %s\n", dst);
-
-	return (0);
-}
-
-*/

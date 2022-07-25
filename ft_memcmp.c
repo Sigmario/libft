@@ -27,24 +27,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		i++;
 	return (str1[i] - str2[i]);
 }
-
-/*
-
-#include <stdio.h>
-#include <string.h>
-int	main(int arc, char **arv)
-{
-	size_t	res;
-	if (arc == 4)
-	{
-		res = memcmp(arv[1], arv[2], atoi(arv[3]));
-		
-		puts("\n- memcmp");
-		printf("%ld\n", res);
-
-		puts("\n- ft_memcmp");
-		printf("%ld\n", res);
-	}
-}
-
-*/

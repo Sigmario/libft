@@ -26,26 +26,3 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		end->next = new;
 	}
 }
-
-/*
-
-#include <stdio.h>
-int	main()
-{
-	t_list *st0 = ft_lstnew("James");
-	t_list *st1 = ft_lstnew("Jonah");
-	t_list *st2 = ft_lstnew("Jameson");
-	t_list *st3 = ft_lstnew("Junior");
-	
-	ft_lstadd_back(&st0, st3);
-	ft_lstadd_back(&st3, st2);
-	ft_lstadd_back(&st2, st1);
-	while (st0)
-	{
-		printf("%s. ", (char *)st0->content);
-		st0 = st0->next;
-	}
-	printf("\n");
-}
-
-*/

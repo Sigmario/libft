@@ -23,18 +23,3 @@ t_list	*ft_lstnew(void *content)
 	var->next = NULL;
 	return (var);
 }
-
-/*
-
-#include <stdio.h>
-int	main(int arc, char **arv)
-{
-	t_list *str;
-	if (arc == 2)
-	{
-		str = ft_lstnew(arv[1]);
-		printf("%s\n", (char *)str->content);
-	}
-}
-
-*/

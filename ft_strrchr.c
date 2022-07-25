@@ -25,26 +25,3 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *)s);
 	return (NULL);
 }
-
-/*
-
-#include <stdio.h>
-#include <string.h>
-int	main(void)
-{
-	const char *str = "My name is Bond... James Bond"; 
-	const char chr = 'B'; 
-	char *ptr;
-
-	puts("\n- strrchr");
-	ptr = strrchr(str, chr);
-	printf("Begins at last %c.\nThe output is: %s.\n", chr, ptr);
-	
-	puts("\n- ft_strrchr");
-	ptr = ft_strrchr(str, chr);
-	printf("Begins at last %c.\nThe output is: %s.\n", chr, ptr);
-	
-	return 0;
-}
-
-*/

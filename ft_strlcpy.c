@@ -30,25 +30,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	dst[i[0]] = 0;
 	return (i[1]);
 }
-
-/*
-
-#include <stdio.h>
-#include <bsd/string.h>
-int	main(void)
-{
-	char src[100] = "Hello";
-	char dst[100];
-
-	puts("\n- strlcpy");
-	printf("%lu\n", strlcpy(dst, src, 5));
-	printf("%s\n", dst);
-
-	puts("\n- ft_strlcpy");
-	printf("%lu\n", ft_strlcpy(dst, src, 5));
-	printf("%s\n", dst);
-
-	return 0;
-}
-
-*/

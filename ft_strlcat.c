@@ -30,23 +30,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		return (len + ft_strlen(src));
 	return (len + ft_strlcpy(dst + len, src, size - len));
 }
-
-/*
-
-#include <stdio.h>
-#include <bsd/string.h>
-int	main(void)
-{
-	char dst[100] = "Qwertyuiop";
-	char src[100] = "Asdfghj";
-	
-	puts("\n- strlcat");
-	printf("Size of Dest + Srce = %lu\n", strlcat(dst, src, 5));
-
-	puts("\n- ft_strlcat");
-	printf("Size of Dest + Srce = %lu\n", ft_strlcat(dst, src, 5));
-
-	return 0;
-}
-
-*/

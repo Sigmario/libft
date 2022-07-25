@@ -16,18 +16,3 @@ int	ft_isprint(int c)
 		return (1);
 	return (0);
 }
-
-/*
-
-#include <stdio.h>
-#include <ctype.h>
-int	main(int arc, char **arv)
-{
-	puts("\n- isprint");
-	printf("%d\n", isprint(126));
-
-	puts("\n- ft_isprint");
-	printf("%d\n", ft_isprint(126));
-}
-
-*/

@@ -40,25 +40,3 @@ int	ft_atoi(const char *str)
 	}
 	return (result * i[1]);
 }
-
-/*
-
-#include <stdio.h>
-int	main(int arc, char **arv)
-{
-	int var;
-	if (arc == 2)
-	{
-		puts("\n- atoi");
-		var = atoi(arv[1]);
-		printf("%d\n", var);
-
-		puts("\n- ft_atoi");
-		var = ft_atoi(arv[1]);
-		printf("%d\n", var);
-
-		perror("\nStatus");
-	}
-}
-
-*/

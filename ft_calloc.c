@@ -24,28 +24,3 @@ void	*ft_calloc(size_t nbr, size_t size)
 	ft_bzero(ptr, size * nbr);
 	return (ptr);
 }
-
-/*
-
-#include <stdio.h>
-int	main(int arc, char **arv)
-{
-	int		nbr;
-	int		*ptr;
-	if (arc == 2)
-	{
-		nbr = arv[1][0];
-		
-		puts("\n- calloc");
-		ptr = calloc(nbr, sizeof(int));
-		printf("'%ls'\n", ptr);
-		free(ptr);
-
-		puts("\n- ft_calloc");
-		ptr = ft_calloc(nbr, sizeof(int));
-		printf("'%ls'\n", ptr);
-		free(ptr);
-	}
-}
-
-*/

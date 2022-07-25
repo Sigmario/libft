@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_nbrlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julmuntz <julmuntz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/05 14:46:54 by julmuntz          #+#    #+#             */
-/*   Updated: 2022/07/10 19:59:42 by julmuntz         ###   ########.fr       */
+/*   Created: 2022/07/10 17:36:35 by julmuntz          #+#    #+#             */
+/*   Updated: 2022/07/10 17:49:47 by julmuntz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*d)(void *))
+int	ft_nbrlen(int n)
 {
-	t_list	*tmp;
+	int	len;
 
-	while (*lst)
+	len = 1;
+	if (n < 0)
 	{
-		tmp = (*lst)->next;
-		ft_lstdelone(*lst, d);
-		*lst = tmp;
+		n *= -1;
+		len++;
 	}
-	*lst = NULL;
+	while (n >= 10)
+	{
+		n /= 10;
+		len++;
+	}
+	return (len);
 }

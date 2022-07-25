@@ -18,23 +18,3 @@ int	ft_tolower(int c)
 		return (c += 32);
 	return (c);
 }
-
-/*
-
-#include <stdio.h>
-int	main(int arc, char **arv)
-{
-	char	upper;
-	if (arc == 2)
-	{
-		upper = arv[1][0];
-
-		puts("\n- tolower");
-		printf("%d\n", tolower(upper));
-
-		puts("\n- ft_tolower");
-		printf("%d\n", ft_tolower(upper));
-	}
-}
-
-*/

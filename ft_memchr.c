@@ -31,26 +31,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
-/*
-
-#include <stdio.h>
-#include <string.h>
-int	main(void)
-{
-	const char *str = "My name is Bond... James Bond";
-	const char chr = 'B';
-	char *ptr;
-
-	puts("\n- memchr");
-	ptr = memchr(str, chr, 007);
-	printf("Begins at first %c.\nThe output is:  %s.\n", chr, ptr);
-	
-	puts("\n- ft_memchr");
-	ptr = ft_memchr(str, chr, 007);
-	printf("Begins at first %c.\nThe output is:  %s.\n", chr, ptr);
-	
-	return 0;
-}
-
-*/

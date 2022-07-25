@@ -12,24 +12,6 @@
 
 #include "libft.h"
 
-static int	ft_nbrlen(int nbr)
-{
-	int	len;
-
-	len = 1;
-	if (nbr < 0)
-	{
-		nbr *= -1;
-		len++;
-	}
-	while (nbr >= 10)
-	{
-		nbr /= 10;
-		len++;
-	}
-	return (len);
-}
-
 char	*ft_itoa(int nbr)
 {
 	int		size;
@@ -57,32 +39,3 @@ char	*ft_itoa(int nbr)
 	}
 	return (str);
 }
-
-/*
-
-#include <stdio.h>
-int	main(int arc, char **arv)
-{
-	char *var;
-	if (arc == 2)
-	{
-		var = ft_itoa(ft_atoi(arv[1]));
-		printf("%s\n", var);
-		free(var);
-	}
-}
-
-*/
-
-/*
-
-static char	*ft_intmin(int nbr)
-{
-	char	*str;
-
-	str = ft_itoa(nbr + 1);
-	str[10] = '8';
-	return (str);
-}
-
-*/
