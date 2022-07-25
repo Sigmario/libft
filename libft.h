@@ -13,10 +13,12 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <stdio.h>
 # include <limits.h>
 # include <stdint.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdarg.h>
 
 typedef struct s_list
 {
@@ -79,5 +81,16 @@ char			*ft_strtrim(char const *s1, char const *set);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 int				ft_tolower(int c);
 int				ft_toupper(int c);
+
+/*				PRINTF														*/
+int				ft_printf(const char *str, ...);
+int				convert_char(char c);
+int				convert_string(char *s);
+int				convert_hex_pointer(unsigned long int hex_pointer);
+int				convert_decimal(int decimal);
+int				convert_integer(int integer);
+int				convert_unsigned(unsigned int decimal_u);
+int				convert_hex_lower(unsigned int hex_lower);
+int				convert_hex_upper(unsigned int hex_upper);
 
 #endif
