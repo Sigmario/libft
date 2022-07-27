@@ -13,12 +13,17 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1
+# endif
+
 # include <stdio.h>
+# include <unistd.h>
+# include <stdlib.h>
 # include <limits.h>
 # include <stdint.h>
-# include <stdlib.h>
-# include <unistd.h>
 # include <stdarg.h>
+# include <fcntl.h>
 
 typedef struct s_list
 {
@@ -60,6 +65,7 @@ void			ft_putendl_fd(char *s, int fd);
 void			ft_puthex_u_lower(unsigned int n);
 void			ft_puthex_u_upper(unsigned int n);
 void			ft_puthex_ul(unsigned long int n);
+void			ft_putint(int n);
 void			ft_putnbr_fd(int n, int fd);
 void			ft_putnbr_u(unsigned int n);
 void			ft_putnbr(int n);
@@ -82,6 +88,9 @@ char			*ft_substr(char const *s, unsigned int start, size_t len);
 int				ft_tolower(int c);
 int				ft_toupper(int c);
 
+/*				GET_NEXT_LINE												*/
+char			*get_next_line(int fd);
+
 /*				PRINTF														*/
 int				ft_printf(const char *str, ...);
 int				convert_char(char c);
@@ -93,4 +102,7 @@ int				convert_unsigned(unsigned int decimal_u);
 int				convert_hex_lower(unsigned int hex_lower);
 int				convert_hex_upper(unsigned int hex_upper);
 
+/*				PUSH_SWAP													*/
+int				ps_atoi(const char *str);
+int				ps_putnbr(char *s);
 #endif

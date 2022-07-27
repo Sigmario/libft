@@ -44,6 +44,7 @@ SRCS		=	ft_atoi.c							\
     			ft_puthex_u_lower.c					\
     			ft_puthex_u_upper.c					\
     			ft_puthex_ul.c						\
+    			ft_putint.c							\
     			ft_putnbr_fd.c						\
     			ft_putnbr_u.c						\
     			ft_putnbr_ul.c						\
@@ -66,6 +67,7 @@ SRCS		=	ft_atoi.c							\
     			ft_substr.c							\
     			ft_tolower.c						\
     			ft_toupper.c						\
+				get_next_line.c						\
 				./ft_printf/ft_printf.c				\
 				./ft_printf/convert_char.c			\
 				./ft_printf/convert_decimal.c		\
@@ -75,6 +77,8 @@ SRCS		=	ft_atoi.c							\
 				./ft_printf/convert_integer.c		\
 				./ft_printf/convert_string.c		\
 				./ft_printf/convert_unsigned.c		\
+				./push_swap/ps_atoi.c				\
+				./push_swap/ps_putnbr.c				\
 
 OBJS		= 	$(SRCS:.c=.o)
 
